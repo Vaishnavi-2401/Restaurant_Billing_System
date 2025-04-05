@@ -1,5 +1,10 @@
 #include<stdio.h>
 #include<string.h>
+#include<stdlib.h>
+
+
+#define TAX_RATE 0.09
+#define DISCOUNT_RATE 0.10
 
 
 typedef struct 
@@ -16,7 +21,6 @@ typedef struct
         char name[50];
         float price;
 }menu_item;
-
 
 
 //menu list
@@ -42,6 +46,55 @@ void display_menu()
         }
 
         printf("-------------------------\n");
+}
+
+
+//bill header
+void bill_header(char date[], char name[])
+{
+        printf("Hotel Krishna\n");
+
+        printf("-------------\n");
+
+        printf("Date : %s\n", date);
+        printf("Invoice To : %s\n", name);
+
+        printf("-------------\n");
+
+        printf("Item\tQty\tPrice\tTotal\n");
+
+        printf("-------------\n");
+}
+
+
+//bill body
+void bill_body(char item[], int qty, float price)
+{
+        printf("%-15s %5d %8.2f %8.2f\n", item, qty, price, qty * price);
+}
+
+
+//bill footer
+void bill_footer(float total)
+{
+        float discount = total * DISCOUNT_RATE;
+        float net_total = total - discount;
+        float tax = net_total * TAX_RATE;
+        float grand_total = net_total + (2 * tax);
+
+        printf("-------------\n");
+
+        printf("Sub Total : %.2f\n", total);
+        printf("Discount @10%% : %.2f\n", discount);
+        printf("Net Total : %.2f\n", net_total);
+        printf("CGST @9%% : %.2f\n", tax);
+        printf("SGST @9%% : %.2f\n", tax);
+
+        printf("-------------\n");
+
+        printf("Grand Total : %.2f\n", grand_total);
+
+        printf("-------------\n");
 }
 
 
