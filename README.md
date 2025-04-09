@@ -1,125 +1,87 @@
-🍽️ Restaurant Billing System
-📌 Overview
-This is a simple restaurant billing system implemented in C language.
-It simulates a basic billing process for a restaurant, allowing users to generate, save, and search customer invoices.
+# 🍽️ Restaurant Billing System
 
-✨ Features & Functionality
-✅ Generate Invoice
+## 📌 Overview
+The **Restaurant Billing System** is a simple billing simulation project written in C.  
+It allows users to generate, store, and search invoices based on customer orders.
 
-Enter customer name and date.
+## ✨ Features
 
-Choose from a predefined list of 5 menu items.
+### 1. Generate Invoices
+- User-friendly menu display with 5 predefined items
+- Input customer name, date, item selections, and quantities
+- Applies:
+  - 🔟 **10% Discount**
+  - 💸 **9% CGST + 9% SGST**
+- Displays a full bill breakdown (subtotal, taxes, discount, grand total)
+- Stores invoice data in `invoices.txt`
 
-Enter item quantities.
+### 2. Show All Invoices
+- Reads and displays all saved invoices from the file
 
-Automatically applies:
+### 3. Search Invoice by Customer Name
+- Searches and displays invoice records for a given customer
 
-🔟 10% Discount
+---
 
-💸 9% CGST + 9% SGST
+## 🛠️ Technologies Used
+- **C Language** – Core programming logic
+- **GCC Compiler** – For compiling and running the program
+- **Text Files** – For persistent invoice data storage
+- **CLI** – Console-based user interface
 
-Displays full bill breakdown.
+---
 
-Saves invoice to invoices.txt.
+## ⚙️ How It Works
 
-✅ Show All Invoices
+### 1. Main Menu Options:
 
-Displays all saved invoices from invoices.txt.
+1. Generate Invoice
 
-✅ Search Invoice
+2. Show All Invoices
 
-Search invoices by customer name.
+3. Search Invoice
 
-✅ Exit Option
+4. Exit
 
-Gracefully exits the program.
 
-🛠️ Technologies Used
-C Programming Language
+### 2. Generate Invoice:
+- Enter customer name and date
+- View menu and select items with quantities
+- Calculates:
+  - Subtotal
+  - 10% Discount
+  - 9% CGST + 9% SGST
+  - Grand Total
+- Prints formatted invoice
+- Saves invoice to `invoices.txt`
 
-GCC Compiler
+### 3. Show All Invoices:
+- Reads from `invoices.txt` and displays all stored bills
 
-Text Files for Data Storage
+### 4. Search Invoice:
+- User enters customer name
+- Displays all matching invoices found in the file
 
-CLI (Command Line Interface)
+### 5. Exit:
+- Terminates the program
 
-🚀 How It Works
-Launch the program.
+---
 
-The main menu provides 4 options:
+## 🚀 How to Run the Program
 
-Generate Invoice
+### 🔹 Clone or Download the Repository  
+git clone https://github.com/yourusername/restaurant-billing-system.git
+cd restaurant-billing-system
 
-Show All Invoices
+### 🔹 Compile the Code
+gcc billing_system.c -o billing_system
 
-Search Invoice
+### 🔹 Run the Program
+./billing_system
 
-Exit
+## 🎯 Future Improvements
+🔧 Add support for dynamic item lists instead of hardcoded items
 
-When generating an invoice:
+🗑️ Include features to delete or update existing invoices
 
-Enter customer name and date.
-
-Select items and their quantities from the predefined menu.
-
-Program calculates subtotal, taxes, discount, and grand total.
-
-Displays formatted bill and saves it to a file.
-
-Invoices are stored and retrieved from invoices.txt.
-
-📌 Code Structure
-1️⃣ Menu Items:
-
-Hardcoded list of 5 food items with prices.
-
-2️⃣ Invoice Generation:
-
-Calculates total, discount, taxes, and grand total.
-
-Displays detailed bill format.
-
-Saves bill details in invoices.txt.
-
-3️⃣ File Handling:
-
-Stores and reads invoice records from a text file.
-
-Enables search and display of customer invoices.
-
-4️⃣ Main Menu Navigation:
-
-Provides options to perform all core functionalities.
-
-🖥️ Installation
-🔹 Prerequisites:
-Ensure you have a C compiler like GCC installed on your system.
-
-🚀 How to Run the Program
-🔹 Compilation:
-sh
-Copy
-Edit
-gcc billing_system.c
-🔹 Execution:
-sh
-Copy
-Edit
-./a.out
-🔹 Menu Options:
-Generate Invoice
-
-Show All Invoices
-
-Search Invoice
-
-Exit
-
-🎯 Future Improvements
-📌 Allow dynamic item list (instead of hardcoding 5 items).
-
-📌 Add features to update or delete invoices.
-
-📌 Implement login functionality for admin and staff.
-
-📌 Improve file format (CSV/JSON) for better readability and data handling.
+🔐 Implement login functionality for admin and staff roles
