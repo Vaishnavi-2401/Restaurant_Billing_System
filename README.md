@@ -70,8 +70,7 @@ It allows users to generate, store, and search invoices based on customer orders
 ## 🚀 How to Run the Program
 
 ### 🔹 Clone or Download the Repository  
-git clone https://github.com/yourusername/restaurant-billing-system.git
-cd restaurant-billing-system
+git clone https://github.com/Vaishnavi-2401/Restaurant_Billing_System.git
 
 ### 🔹 Compile the Code
 gcc billing_system.c -o billing_system
